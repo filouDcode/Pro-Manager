@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    command: npm run serve
+    ports:
+      - "8000:8080"
+    volumes:
+      - .:/app
+    environment:
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
